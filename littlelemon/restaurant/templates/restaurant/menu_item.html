@@ -1,0 +1,10 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+<h2>{{ item.name }}</h2>
+<p><strong>Price:</strong> ${{ item.price }}</p>
+<p>{{ item.description }}</p>
+{% if item.image %}
+  <img src="{{ item.image.url }}" alt="{{ item.name }}" style="max-width:300px;">
+{% endif %}
+
+{% endblock %}
